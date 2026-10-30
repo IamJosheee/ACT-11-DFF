@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Joshe | Blog Personal</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+  <style>
+    body {
+      background: #0d0b12;
+      color: #f3effa;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      scroll-margin-top: 75px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .hero {
+      padding: 55px 0;
+      color: #fff;
+    }
+
+    .hero img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+
+    .hero h3 {
+      font-weight: 600;
+    }
+
+    .hero p {
+      font-size: 17px;
+    }
+
+    .section-title {
+      margin: 45px 0 30px;
+      font-weight: 600;
+      color: #f3effa;
+    }
+
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background: #191520;
+      color: #f3effa;
+    }
+
+    .card-image img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      flex-grow: 1;
+    }
+
+    .card-title {
+      font-weight: 600 !important;
+    }
+
+    .card-panel {
+      background: #191520;
+      color: #f3effa;
+    }
+
+    .card .card-action {
+      border-top-color: #342b40;
+    }
+
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-floating) {
+      color: #c4a7ff !important;
+    }
+
+    .deep-purple-text {
+      color: #c4a7ff !important;
+    }
+
+    .input-field label,
+    .input-field .prefix {
+      color: #c4b8d6;
+    }
+
+    .input-field input,
+    .input-field textarea {
+      color: #f3effa;
+      border-bottom-color: #76658f !important;
+    }
+
+    .input-field input:focus,
+    .input-field textarea:focus {
+      border-bottom-color: #b388ff !important;
+      box-shadow: 0 1px 0 0 #b388ff !important;
+    }
+
+    .input-field input:focus + label,
+    .input-field textarea:focus + label,
+    .input-field .prefix.active {
+      color: #c4a7ff;
+    }
+
+    .chip {
+      background: #342849;
+      color: #eee5ff;
+    }
+
+    .article {
+      margin: 25px 0;
+      padding: 25px;
+      border-radius: 8px;
+    }
+
+    .article p {
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .about-panel {
+      padding: 30px;
+      margin: 30px 0;
+    }
+
+    .chip {
+      margin: 5px;
+    }
+
+    .contact-section {
+      margin-bottom: 50px;
+    }
+
+    .social-links a {
+      margin-right: 15px;
+    }
+
+    .back-top {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 99;
+    }
+
+    footer {
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .hero {
+        padding: 35px 15px;
+      }
+
+      .hero h3 {
+        font-size: 2rem;
+      }
+
+      .article {
+        padding: 18px;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVEGACION -->
+  <nav class="deep-purple darken-3">
+    <div class="nav-wrapper container">
+
+      <a href="#inicio" class="brand-logo">Joshe.</a>
+
+      <a href="#" data-target="menu-movil"
+        class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#publicaciones">Publicaciones</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- MENU MOVIL -->
+  <ul class="sidenav" id="menu-movil">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#publicaciones">Publicaciones</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <!-- PRESENTACION -->
+  <section id="inicio" class="hero deep-purple darken-2">
+    <div class="container center-align">
+
+      <img
+        src="img/joshe.png"
+        alt="Fotografía de Joshe">
+
+      <h3>Hola, soy Joshe</h3>
+
+      <p>
+        Diseñador de flyers, competidor de Super Smash Bros. Ultimate
+        y estudiante de Ingeniería de Software en la UES Navojoa.
+      </p>
+
+      <p>
+        Me apasiona la creatividad, la tecnología y desarrollar
+        proyectos que combinen diseño y programación.
+      </p>
+
+      <a href="#publicaciones" class="btn deep-purple">
+        Explorar publicaciones
+        <i class="material-icons right">arrow_downward</i>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- PUBLICACIONES -->
+  <section id="publicaciones" class="container">
+
+    <h4 class="center-align section-title">
+      Mis publicaciones
+    </h4>
+
+    <div class="row">
+
+      <!-- ARTICULO 1 -->
+      <div class="col s12 m6 l4">
+        <div class="card">
+
+          <div class="card-image">
+            <img src="https://picsum.photos/seed/diseno/600/400"
+              alt="Diseño gráfico">
+          </div>
+
+          <div class="card-content">
+            <span class="card-title">Diseño gráfico y flyers</span>
+            <p><small>10 de octubre de 2026</small></p>
+            <p>
+              Mi experiencia creando diseños para eventos,
+              torneos y proyectos personales.
+            </p>
+          </div>
+
+          <div class="card-action">
+            <a href="#articulo-1">Leer artículo</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ARTICULO 2 -->
+      <div class="col s12 m6 l4">
+        <div class="card">
+
+          <div class="card-image">
+            <img src="https://picsum.photos/seed/smash/600/400"
+              alt="Videojuegos competitivos">
+          </div>
+
+          <div class="card-content">
+            <span class="card-title">Mi experiencia en SSBU</span>
+            <p><small>12 de octubre de 2026</small></p>
+            <p>
+              Cómo los videojuegos competitivos se convirtieron
+              en una de mis principales aficiones.
+            </p>
+          </div>
+
+          <div class="card-action">
+            <a href="#articulo-2">Leer artículo</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ARTICULO 3 -->
+      <div class="col s12 m6 l4">
+        <div class="card">
+
+          <div class="card-image">
+            <img src="https://picsum.photos/seed/programacion/600/400"
+              alt="Programación y tecnología">
+          </div>
+
+          <div class="card-content">
+            <span class="card-title">Mi camino en software</span>
+            <p><small>15 de octubre de 2026</small></p>
+            <p>
+              Mi experiencia como estudiante de Ingeniería
+              de Software en la UES.
+            </p>
+          </div>
+
+          <div class="card-action">
+            <a href="#articulo-3">Leer artículo</a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ARTICULO 4 -->
+      <div class="col s12 m6 l4">
+        <div class="card">
+
+          <div class="card-image">
+            <img src="https://picsum.photos/seed/proyectos/600/400"
+              alt="Proyectos personales">
+          </div>
+
+          <div class="card-content">
+            <span class="card-title">Mis proyectos personales</span>
+            <p><small>20 de octubre de 2026</small></p>
+            <p>
+              Una mirada a los proyectos que desarrollo
+              combinando creatividad y tecnología.
+            </p>
+          </div>
+
+          <div class="card-action">
+            <a href="#articulo-4">Leer artículo</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTENIDO COMPLETO DE LOS ARTICULOS -->
+  <section id="articulos-completos" class="container">
+
+    <h4 class="center-align section-title">
+      Artículos completos
+    </h4>
+
+    <!-- ARTICULO 1 -->
+    <article id="articulo-1" class="card-panel article">
+
+      <h5>Diseño gráfico y creación de flyers</h5>
+      <p><small>10 de octubre de 2026 | Diseño</small></p>
+
+      <p>
+        El diseño gráfico es una de las actividades que más disfruto
+        porque me permite combinar creatividad, organización y
+        comunicación visual. Una de las cosas que más realizo es
+        diseñar flyers para eventos, torneos y diferentes proyectos.
+        Considero que un buen diseño no solamente debe verse bien,
+        también debe transmitir correctamente la información y
+        captar la atención de las personas.
+      </p>
+
+      <p>
+        En mis proyectos utilizo herramientas como Photoshop,
+        Blender y otros programas de edición. Cada uno me permite
+        experimentar con diferentes estilos, composiciones,
+        tipografías, colores y efectos visuales. También me gusta
+        tomar referencias de videojuegos, personajes y diferentes
+        elementos de la cultura digital para desarrollar diseños
+        con una identidad propia.
+      </p>
+
+      <p>
+        Una parte importante de esta actividad es trabajar con
+        clientes y organizadores de eventos, ya que cada proyecto
+        tiene necesidades diferentes. En ocasiones es necesario
+        realizar varios cambios hasta conseguir el resultado
+        esperado. Esto me ha ayudado a desarrollar paciencia,
+        atención al detalle y mejores habilidades de comunicación.
+      </p>
+
+      <p>
+        Mi objetivo es seguir mejorando mis conocimientos de diseño
+        y aprender nuevas técnicas que me permitan crear proyectos
+        visuales más completos. También quiero seguir explorando
+        la integración del diseño 3D con el diseño tradicional.
+        Para mí, el diseño gráfico es una forma de expresar ideas
+        y convertirlas en algo visual.
+      </p>
+
+      <a href="#publicaciones" class="btn-flat deep-purple-text">
+        Volver a publicaciones
+      </a>
+
+    </article>
+
+    <!-- ARTICULO 2 -->
+    <article id="articulo-2" class="card-panel article">
+
+      <h5>Mi experiencia en Super Smash Bros. Ultimate</h5>
+      <p><small>12 de octubre de 2026 | Videojuegos</small></p>
+
+      <p>
+        Los videojuegos siempre han sido una parte importante de
+        mis intereses, pero uno de los que más ha influido en mí
+        es Super Smash Bros. Ultimate. Este juego de peleas reúne
+        personajes de diferentes franquicias y ofrece un sistema
+        competitivo que requiere práctica, conocimiento y
+        adaptación constante.
+      </p>
+
+      <p>
+        Mi experiencia como competidor me ha permitido conocer
+        diferentes jugadores, participar en torneos y aprender
+        sobre el ambiente de la comunidad competitiva. Actualmente
+        juego con Kazuya, un personaje que requiere precisión,
+        ejecución y conocimiento de sus herramientas. Aprender
+        sus movimientos y enfrentamientos ha sido una experiencia
+        interesante que me motiva a seguir mejorando.
+      </p>
+
+      <p>
+        Además de competir, participo en la organización de
+        actividades relacionadas con NavSon Smash. Organizar
+        torneos implica preparar brackets, coordinar participantes,
+        trabajar en publicidad y procurar que los eventos se
+        desarrollen correctamente. Es una actividad que combina
+        mi interés por los videojuegos con mis habilidades de
+        diseño y organización.
+      </p>
+
+      <p>
+        Considero que la comunidad competitiva es una parte
+        fundamental de esta experiencia. Conocer jugadores,
+        compartir conocimientos y participar en eventos permite
+        crear amistades y mejorar como competidor. Mi objetivo
+        es continuar participando en torneos, mejorar mi nivel
+        de juego y contribuir al crecimiento de la escena local
+        de Super Smash Bros. Ultimate.
+      </p>
+
+      <a href="#publicaciones" class="btn-flat deep-purple-text">
+        Volver a publicaciones
+      </a>
+
+    </article>
+
+    <!-- ARTICULO 3 -->
+    <article id="articulo-3" class="card-panel article">
+
+      <h5>Mi camino en Ingeniería de Software</h5>
+      <p><small>15 de octubre de 2026 | Tecnología</small></p>
+
+      <p>
+        Actualmente estudio Ingeniería de Software en la
+        Universidad Estatal de Sonora, en Navojoa. Elegí esta
+        área porque me interesa comprender cómo funcionan los
+        programas y cómo se pueden utilizar para resolver
+        diferentes problemas. La programación es una disciplina
+        que requiere lógica, creatividad y constancia, ya que
+        cada proyecto presenta retos diferentes.
+      </p>
+
+      <p>
+        Durante mi formación he trabajado con diferentes
+        tecnologías y lenguajes de programación. He tenido
+        experiencias desarrollando proyectos con Java,
+        JavaScript, HTML y CSS, además de utilizar herramientas
+        como Visual Studio Code y Git para organizar y administrar
+        mi trabajo. También he aprendido sobre pruebas de
+        software y la importancia de comprobar que un programa
+        funcione correctamente.
+      </p>
+
+      <p>
+        Uno de los aspectos que más me gusta de esta carrera es
+        que permite desarrollar soluciones desde cero. Crear
+        una página web, diseñar una aplicación o automatizar
+        alguna tarea son ejemplos de cómo los conocimientos
+        adquiridos pueden convertirse en proyectos funcionales.
+      </p>
+
+      <p>
+        Sé que todavía tengo mucho por aprender, especialmente
+        en áreas como desarrollo web, bases de datos y creación
+        de aplicaciones. Mi objetivo es fortalecer mis
+        habilidades técnicas, desarrollar proyectos cada vez
+        más completos y adquirir experiencia que me permita
+        desenvolverme profesionalmente en el área del software.
+      </p>
+
+      <a href="#publicaciones" class="btn-flat deep-purple-text">
+        Volver a publicaciones
+      </a>
+
+    </article>
+
+    <!-- ARTICULO 4 -->
+    <article id="articulo-4" class="card-panel article">
+
+      <h5>Mis proyectos personales y creatividad</h5>
+      <p><small>20 de octubre de 2026 | Proyectos</small></p>
+
+      <p>
+        Una de las cosas que más disfruto es desarrollar proyectos
+        personales porque me permiten experimentar con ideas
+        diferentes y aplicar los conocimientos que voy adquiriendo.
+        No todos mis proyectos están relacionados con programación;
+        algunos también involucran diseño gráfico, modelado 3D
+        y videojuegos.
+      </p>
+
+      <p>
+        He trabajado con herramientas como Blender para crear
+        modelos y renders, además de utilizar programas de edición
+        para desarrollar material gráfico. También me interesa
+        la creación de videojuegos y he experimentado con motores
+        como RPG Maker y Godot. Estos proyectos me permiten
+        explorar diferentes áreas del desarrollo digital.
+      </p>
+
+      <p>
+        Otro tipo de proyectos que me interesa desarrollar son
+        las páginas web. Me gusta trabajar con HTML, CSS y
+        JavaScript para construir interfaces que sean funcionales
+        y visualmente atractivas. También considero importante
+        aprender a utilizar herramientas de control de versiones
+        para mantener mis proyectos organizados.
+      </p>
+
+      <p>
+        Mi objetivo es continuar creando proyectos que combinen
+        mis intereses en tecnología y diseño. Quiero mejorar
+        mis habilidades, aprender nuevas herramientas y construir
+        un portafolio que muestre lo que soy capaz de desarrollar.
+        Creo que experimentar y practicar constantemente es una
+        de las mejores maneras de aprender, por eso considero
+        que cada proyecto representa una nueva oportunidad
+        para mejorar.
+      </p>
+
+      <a href="#publicaciones" class="btn-flat deep-purple-text">
+        Volver a publicaciones
+      </a>
+
+    </article>
+
+  </section>
+
+  <!-- SOBRE MI -->
+  <section id="sobre-mi" class="container">
+
+    <div class="card-panel about-panel">
+
+      <h4>Sobre mí</h4>
+
+      <p>
+        Soy Joshe, estudiante de Ingeniería de Software en la
+        UES Navojoa. Me considero una persona interesada en la
+        tecnología, el diseño y los videojuegos. Me gusta aprender
+        nuevas herramientas y desarrollar proyectos donde pueda
+        combinar mis conocimientos técnicos con mi creatividad.
+      </p>
+
+      <h5>Mis habilidades</h5>
+
+      <div class="chip">HTML</div>
+      <div class="chip">CSS</div>
+      <div class="chip">JavaScript</div>
+      <div class="chip">Java</div>
+      <div class="chip">Blender</div>
+      <div class="chip">Photoshop</div>
+      <div class="chip">Git</div>
+      <div class="chip">Diseño gráfico</div>
+
+      <h5>Mis intereses</h5>
+
+      <div class="chip">Videojuegos</div>
+      <div class="chip">Super Smash Bros.</div>
+      <div class="chip">Modelado 3D</div>
+      <div class="chip">Desarrollo web</div>
+      <div class="chip">Tecnología</div>
+
+      <h5>Mis objetivos</h5>
+
+      <p>
+        A corto plazo quiero seguir fortaleciendo mis conocimientos
+        de programación y diseño, además de completar proyectos
+        personales que me permitan practicar lo aprendido.
+      </p>
+
+      <p>
+        A largo plazo busco desarrollarme profesionalmente en el
+        área del software, adquirir experiencia en proyectos reales
+        y continuar combinando la programación con la creatividad
+        y el diseño digital.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="container contact-section">
+
+    <h4 class="section-title">Contacto</h4>
+
+    <div class="card-panel">
+
+      <p>
+        ¿Tienes alguna pregunta o quieres conocer más sobre
+        mis proyectos? Puedes dejarme un mensaje.
+      </p>
+
+      <form id="formulario">
+
+        <div class="input-field">
+          <i class="material-icons prefix">person</i>
+          <input id="nombre" type="text" required minlength="2">
+          <label for="nombre">Nombre</label>
+        </div>
+
+        <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          <input id="correo" type="email" required>
+          <label for="correo">Correo electrónico</label>
+        </div>
+
+        <div class="input-field">
+          <i class="material-icons prefix">message</i>
+          <textarea id="mensaje"
+            class="materialize-textarea"
+            required minlength="5"></textarea>
+          <label for="mensaje">Mensaje</label>
+        </div>
+
+        <button class="btn deep-purple" type="submit">
+          Enviar mensaje
+          <i class="material-icons right">send</i>
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="page-footer deep-purple darken-3">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col s12 m6">
+          <h5>Joshe.</h5>
+
+          <p>
+            Compartiendo mis experiencias, proyectos e intereses
+            en diseño, tecnología y videojuegos.
+          </p>
+        </div>
+
+        <div class="col s12 m6">
+          <h5>Enlaces</h5>
+
+          <ul>
+            <li>
+              <a class="white-text" href="#inicio">Inicio</a>
+            </li>
+            <li>
+              <a class="white-text" href="#publicaciones">
+                Publicaciones
+              </a>
+            </li>
+            <li>
+              <a class="white-text" href="#sobre-mi">
+                Sobre mí
+              </a>
+            </li>
+            <li>
+              <a class="white-text" href="#contacto">
+                Contacto
+              </a>
+            </li>
+          </ul>
+
+          <div class="social-links">
+            <a class="white-text"
+              href="https://github.com/IamJosheee"
+              target="_blank" rel="noopener noreferrer">
+              <i class="material-icons">code</i>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        © 2026 Joshe | Blog Personal
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- BOTON VOLVER ARRIBA -->
+  <a href="#inicio" class="btn-floating btn-large deep-purple back-top"
+    aria-label="Volver al inicio">
+    <i class="material-icons">keyboard_arrow_up</i>
+  </a>
+
+  <!-- MATERIALIZE JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      // Inicializar menu lateral
+      const menus = document.querySelectorAll(".sidenav");
+      M.Sidenav.init(menus);
+
+      // Cerrar menu movil al seleccionar una opcion
+      document.querySelectorAll(".sidenav a").forEach(link => {
+        link.addEventListener("click", () => {
+          const instance = M.Sidenav.getInstance(
+            document.getElementById("menu-movil")
+          );
+
+          if (instance) {
+            instance.close();
+          }
+        });
+      });
+
+      // Validacion del formulario
+      const formulario = document.getElementById("formulario");
+
+      formulario.addEventListener("submit", evento => {
+        evento.preventDefault();
+
+        if (formulario.checkValidity()) {
+
+          M.toast({
+            html: "¡Formulario validado correctamente!"
+          });
+
+          formulario.reset();
+          M.updateTextFields();
+
+        } else {
+          formulario.reportValidity();
+        }
+      });
+
+    });
+  </script>
+
+</body>
+</html>
